@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payout | Payout API | Bulk Payout | Payout API Provider - Payout Fintech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit/dist/typeit.min.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    
+    <section id="navbar">
+        <nav class=" fixed-top bg-nav navbar-transparent">
+            <div class="container-fluid pt-1">
+                <div class="d-none d-md-block">
+                    <div class="row"> 
+                        <div class="col-md text-center">
+                            <a href="#">
+                                <img src="Images/logo.svg" class="img-fluid" width="180p">
+                            </a>
+                        </div>
+                        <div class="col-md text-center pt-2" style="margin-left: 130px;">
+                            <button class="btn btn-success-1" data-bs-toggle="modal" data-bs-target="#Modal" data-bs-whatever="@mod"><i class="fa-solid fa-phone"></i> Schedule a call back</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="row">
+                        <div class="col-md d-flex justify-content-between align-items-center">
+                            <a href="#" style="order: 1;">
+                                <img src="Images/logo.svg" class="img-fluid" width="180p" style="order: 1;">
+                            </a>
+                            <button class="text-end btn bg-light btn-outline-dark" style="order: 2;"><i class="fa-solid fa-phone"></i></button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </nav>
+    </section>
+
+    <div class="modal fade" id="Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:#008b00">Schedule a call back</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder=" Name" >
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder=" Mobile No.">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder=" Official E-mail">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder=" Company Website">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-success">Schedule a call back</button>
+              </div> 
+          </div>
+        </div>
+    </div>
+
+    <section id="mobile-bottom-nav">
+        <div class="d-md-none">
+            <nav class="navbar fixed-bottom bg-nav-2">
+                <div class="container-fluid">   
+                    <div class="col-md-4 mx-auto text-light text-center">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#Modal" data-bs-whatever="@mod" style="font-size:16px;color:white;text-decoration:none">Schedule a call back</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section id="header">
+        <div class="container-fluid" style="padding:0px;overflow:hidden;background-image: url('Images/payout-bgposter.jpg'); background-position: center; background-attachment: scroll; background-attachment: scroll;background-repeat: no-repeat; background-size: cover;">
+            <div class="row text-light pt-5">
+                <div class="col-md-10 mx-auto pt-3">
+                    <div class="row text-center">
+                        <div class="col-md pt-4 content-3">
+                            <h2 style="font-weight:400;">Payout API and Bulk Payout Solution for Business</h1>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md pt-2 content-2">
+                            <h4 style="font-weight: 400;">Send payments to any bank account numbers or UPI VPAs with fund transfer APIs and bulk file upload</h4>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md pt-3 content-1">
+                            <h3 style="font-weight: 400;">
+                                <span class="dot-circle" style="margin-right: 10px;"></span> Real-time fund transfer 
+                                <span class="dot-circle" style="margin-left: 10px; margin-right: 10px;"></span> Payout APIs & Bulk Payout 
+                                <span class="dot-circle" style="margin-left: 10px;"></span> Outstanding support
+                            </h3>
+                        </div>                        
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md pt-3 pb-5">
+                            <div class="typed_wrap">
+                                <h4 style="font-weight: 400;" class="text-center">Payout APIs to transfer <u><span class="typed"></span></u></h4>
+                            </div>                                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-5">
+                <div class="d-none d-md-block">
+                    <div class="col-md-11 mx-auto pb-5">
+                        <div class="input-group">
+                            <input type="text" class="form-control custom-height" placeholder=" Name">
+                            <input type="text" class="form-control custom-height" placeholder=" Mobile No.">
+                            <input type="text" class="form-control custom-height" placeholder=" Official E-mail">
+                            <input type="text" class="form-control custom-height" placeholder=" Company Website">
+                            <button class="btn btn-success text-light custom-height" type="button">SCHEDULE A CALL</button>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7 pl-md-4">
+                                <div class="input-group d-grid">
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Mobile No.">
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Official E-mail">
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="text" class="form-control custom-height" placeholder=" Company Website">
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-success text-light custom-height" type="button">SCHEDULE A CALL</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-3 pt-3"></div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container-fluid bg-col-1 pb-3">
+            <div class="d-none d-md-block">
+                <div class="row">
+                    <div class="col-md-10 mx-auto pt-5">
+                        <div class="row text-center">
+                            <h3 style="font-weight: 350;"> Products </h3>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row pt-4 text-center">
+                            <div class="col-md shadow-item">
+                                <h4 style="font-weight: 350; color: #008b00;"> Payout API </h4>
+                                <p class="pt-3 pb-2"></p>
+                                <p style="color: #737789;">Complete payout solution for bank account transfer, UPI Payout.</p>
+                            </div>
+                            <div class="col-md shadow-item">
+                                <h4 style="font-weight: 350; color: #008b00;"> Bank Account Verification - API </h4>
+                                <p class="pt-1"></p>
+                                <p style="color: #737789;">Real transfer bank account verification APIs.</p>
+                            </div>
+                            <div class="col-md shadow-item">
+                                <h4 style="font-weight: 350; color: #008b00;"> BBPS Biller </h4>
+                                <p class="pt-3 pb-2"></p>
+                                <p style="color: #737789;">Complete BBPS biller solution to collect bill payments from customers.</p>
+                            </div>
+                            <div class="col-md shadow-item">
+                                <h4 style="font-weight: 350; color: #008b00;"> BBPS Biller - B2B Payments </h4>
+                                <p class="pt-1 "></p>
+                                <p style="color: #737789;">Complete solution to collect B2B invoice payments from business customers.</p>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-none">
+                <div class="row">
+                    <div class="col-md-10 mx-auto pt-5">
+                        <div class="row text-center">
+                            <h3 style="font-weight: 350;"> Products </h3>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row pt-4 text-center">
+                            <div class="col-md-3 shadow-item" style="margin-bottom:10px;">
+                                <h4 style="font-weight: 350; color: #008b00;"> Payout API </h4>
+                                <p class="pt-3 pb-2"></p>
+                                <p style="color: #737789;">Complete payout solution for bank account transfer, UPI Payout.</p>
+                            </div>
+                            <div class="col-md-3 shadow-item" style="margin-bottom:10px">
+                                <h4 style="font-weight: 350; color: #008b00;"> Bank Account Verification - API </h4>
+                                <p class="pt-1"></p>
+                                <p style="color: #737789;">Real transfer bank account verification APIs.</p>
+                            </div>
+                            <div class="col-md-3 shadow-item" style="margin-bottom:10px">
+                                <h4 style="font-weight: 350; color: #008b00;"> BBPS Biller </h4>
+                                <p class="pt-3 pb-2"></p>
+                                <p style="color: #737789;">Complete BBPS biller solution to collect bill payments from customers.</p>
+                            </div>
+                            <div class="col-md-3 shadow-item pb-4" style="margin-bottom:10px">
+                                <h4 style="font-weight: 350; color: #008b00;"> BBPS Biller - B2B Payments </h4>
+                                <p class="pt-1 "></p>
+                                <p style="color: #737789;">Complete solution to collect B2B invoice payments from business customers.</p>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing">
+        <div class="container">
+            <div class="d-none d-md-block">
+                <div class="row">
+                    <div class="col-md-8 mx-auto pt-5">
+                        <div class="text-center">
+                            <h3 style="font-weight: 350;"> Payout Pricing </h3>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row pt-5 pb-3">
+                            <div class="col-md shadow-item-zoom p-0">
+                                <h5 style="color: #fff;background: #008b00;padding:15px"> IMPS / NEFT Payout Pricing </h5>
+                                <ul class="ul1">
+                                    <li>Fund Transfer APIs for Bank Account</li>
+                                    <li>NEFT/RTGS - <b>&#8377</b> 2</li>
+                                    <li>IMPS Below 999 - <b>&#8377</b> 2</li>
+                                    <li>IMPS Below 25,000 - <b>&#8377</b> 5</li>
+                                    <li>IMPS Above 25,000 - <b>&#8377</b> 9</li>
+                                </ul>
+                            </div>
+                            <div class="col-md shadow-item-zoom p-0">
+                                <h5 style="color: #fff;background: #008b00;padding:15px"> UPI Payout Pricing </h5>
+                                <ul class="ul1">
+                                    <li>Fund Transfer APIs for UPI VPAs</li>
+                                    <li>UPI Below 999 - <b>&#8377</b> 4</li>
+                                    <li>UPI Below 25,000 - <b>&#8377</b> 7</li>
+                                    <li>UPI Above 25,000 - <b>&#8377</b> 10</li>                            
+                                </ul>
+                            </div>
+                            <div class="col-md shadow-item-zoom p-0">
+                                <h5 style="color: #fff;background: #008b00;padding:15px"> Enterprise Payout Pricing </h5>
+                                <ul class="ul1">
+                                    <li>More than 50,000 payouts per month</li>
+                                    <li>Customised pricing plan based on volume</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li><button class="btn btn-lg btn-success-1" style="margin-top: 25px;">SCHEDULE A CALL</button></li>    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-none">
+                <div class="row">
+                    <div class="col-md-8 mx-auto pt-3">
+                        <div class="text-center">
+                            <h3 style="font-weight: 350;"> Payout Pricing </h3>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row pt-3 pb-3">
+                            <div class="col-md-4 shadow-item-zoom" style="margin-left: 0px;margin-right:0px">
+                                <h5 style="color: #fff;background: #008b00;padding:15px"> IMPS / NEFT Payout Pricing </h5>
+                                <ul class="ul1">
+                                    <li>Fund Transfer APIs for Bank Account</li>
+                                    <li>NEFT/RTGS - <b>&#8377</b> 2</li>
+                                    <li>IMPS Below 999 - <b>&#8377</b> 2</li>
+                                    <li>IMPS Below 25,000 - <b>&#8377</b> 5</li>
+                                    <li>IMPS Above 25,000 - <b>&#8377</b> 9</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 shadow-item-zoom" style="margin-left: 0px;margin-right:0px">
+                                <h5 style="color: #fff;background: #008b00;padding:15px"> UPI Payout Pricing </h5>
+                                <ul class="ul1">
+                                    <li>Fund Transfer APIs for UPI VPAs</li>
+                                    <li>UPI Below 999 - <b>&#8377</b> 4</li>
+                                    <li>UPI Below 25,000 - <b>&#8377</b> 7</li>
+                                    <li>UPI Above 25,000 - <b>&#8377</b> 10</li>                            
+                                </ul>
+                            </div>
+                            <div class="col-md-4 shadow-item-zoom" style="margin-left: 0px;margin-right:0px">
+                                <h5 style="color: #fff;background: #008b00;padding:15px"> Enterprise Payout Pricing </h5>
+                                <ul class="ul1">
+                                    <li>More than 50,000 payouts per month</li>
+                                    <li>Customised pricing plan based on volume</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li><button class="btn btn-lg btn-success-1" style="margin-top: 25px;">SCHEDULE A CALL</button></li>    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features">
+        <div class="container-fluid bg-col-1 pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h2 style="font-weight: 350;">Features</h2>
+                        <hr class="hr-k">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <div class="row pt-4 text-center">
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5 "><i class="fa-solid fa-cloud fa-2xl"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" class="pt-3 pb-2">REST APIs</p>
+                                <p style="color: #737789;">Developer friendly REST APIs to get started, Call fund transfer API and know the fund transfer status by calling Status API.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-rotate-right"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1">Webhook</p>
+                                <p style="color: #737789;">Get 24 X 7 notification via webhook for every payout transaction status.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-upload"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-3 pb-2">Bulk File Upload</p>
+                                <p style="color: #737789;">Zero integration, Start using our payout with bulk file upload.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-user-large-slash"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1 ">No Beneficiary Addition</p>
+                                <p style="color: #737789;">Send payments without any delays, not required to add beneficiary, no cooling period send instantly with payout API or bulk payout file upload.</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-10 mx-auto">
+                        <div class="row pt-4 text-center">
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-regular fa-clock fa-2xl"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-3 pb-2">Real Time Payment</p>
+                                <p style="color: #737789;">Send payments in real time even on bank holidays and Sundays with IMPS payouts and UPI payouts.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-regular fa-circle-check fa-2xl"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1">Payment Status</p>
+                                <p style="color: #737789;">Get Payment status in everywhere API, webhook notifications and Dashboard.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-magnifying-glass"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-3 pb-2">Search</p>
+                                <p style="color: #737789;">Find anything in seconds, search by request Id, UTR, remitter account number, reference number…</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-users"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1 ">Logins</p>
+                                <p style="color: #737789;">Manage multiple logins, create/deactivate/reset as much as logins you want.</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-10 mx-auto">
+                        <div class="row pt-4 text-center">
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-user-check"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-3 pb-2">Roles and Access Control</p>
+                                <p style="color: #737789;">Control your dashboard access by roles based access, give limited access or selected access of full access to logins.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-shuffle fa-2xl"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1">Approval and Workflows</p>
+                                <p style="color: #737789;">Define your payment approval process with simple or multiple logins with makers and checkers.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-user-lock"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-3 pb-2">Dashboard Security</p>
+                                <p style="color: #737789;">Enable security features such as IP whitelisting, multi login, role based access, transaction password, two factor authentication, maker checker and more.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-lock"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1 ">API Security</p>
+                                <p style="color: #737789;">Enable security features such as server IP whitelisting, multiple authorization types, signed request, HTTPS-Only Mode and more.</p>
+                            </div>
+                        </div> 
+                    </div>                
+                    <div class="col-md-10 mx-auto">
+                        <div class="row pt-4 text-center">
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-copy"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-3 pb-2">Duplicate Payment Prevention</p>
+                                <p style="color: #737789;">Industry first feature to prevent duplicate payment with intelligent duplicate file checker mechanism and other options to prevent duplicate payments.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-regular fa-circle-dot fa-2xl"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1">Fraud Detection</p>
+                                <p style="color: #737789;">Our battle tested rules help prevent fraud payments to suspicious accounts and black listed accounts.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-regular fa-clipboard fa-2xl"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-3 pb-2">Reports</p>
+                                <p style="color: #737789;">Reports what you need complete statement, daily reports, monthly reports, date range statement, reports by payment status and more.</p>
+                            </div>
+                            <div class="col-md shadow-item-1">
+                                <div class="icon-box">
+                                    <h4 class="loggo pt-4 pb-5"><i class="fa-solid fa-2xl fa-bell"></i></h4>
+                                </div>
+                                <p style="color:#008b00;font-size:20px" cclass="pt-1 ">Notifications</p>
+                                <p style="color: #737789;">Get notified about available balance, threshold limit , insufficient balance error, webhook failure notification and more.</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="pb-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container-fluid pb-5">
+            <div class="row pt-4">
+                <div class="col-md-8 mx-auto">
+                    <div class="row text-center">
+                        <h3 style="font-weight: 350;">How Payout Works</h3>
+                        <h6 style="font-weight: 200;">Payout is simple as 1, 2, 3</h6>
+                        <hr class="hr-k">
+                    </div>
+                    <div class="row text-center pt-5">
+                        <div class="col-md shadow-itemm">
+                            <h5 class="counter">1</h5>
+                            <p>Load funds to the Payout account in IMPS/ NEFT/ RTGS mode.</p>
+                        </div>
+                        <div class="col-md-1 pt-5 d-none d-md-block">
+                            <i class="fa-solid fa-circle-arrow-right fa-2xl" style="color: #008b25;"></i>                        
+                        </div>
+                        <div class="col-md shadow-itemm">
+                            <h5 class="counter">2</h5>
+                            <p>Do payouts using <span style="color:#008b25">Payout API</span>  or <span style="color:#008b25">Bulk payout file upload</span></p>
+                        </div>
+                        <div class="col-md-1 pt-5 d-none d-md-block">
+                            <i class="fa-solid fa-circle-arrow-right fa-2xl" style="color: #008b25;"></i>                        
+                        </div>
+                        <div class="col-md shadow-itemm">
+                            <h5 class="counter">3</h5>
+                            <p>Get the payment status everywhere like API / Webhook / Dashboard</p>
+                        </div>
+                    </div>
+                    <div class="row text-center pt-3">
+                        <h6 style="font-weight: 200;">It is very simple as told.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="API">
+        <div class="container-fluid bg-col-1 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="row text-center">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">Payout APIs</h3>
+                                <h6 style="font-weight: 350;">Simple fund transfer APIs to automate your payouts flow</h6>
+                                <hr class="hr-k">
+                            </div>
+                        </div>
+                        <div class="row text-start pt-4 pb-4">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">FUND TRANSFER API</h3>
+                                <h6 style="font-weight: 350;">Call Fund transfer API with the unique request id, beneficiary details, mode and amount.</h6>
+                                <h6 style="font-weight: 350;">Fund Transfer API Request</h6>
+                            </div>
+                        </div>
+                        <div class="row bg-code text-start text-light">
+                            <div class="col-md-10 mx-auto">
+                                <p class="pt-2"></p>
+                                <p> {</p>
+                                <p><span style="color:#dc3545">"requestId"</span> : <span style="color: #99c2f0;">"pout202008260002"</span>,</p>
+                                <p><span style="color:#dc3545">"beneficiaryName"</span> : <span style="color: #99c2f0;">"Demo Company"</span>,</p>
+                                <p><span style="color:#dc3545">"accountNo"</span> : <span style="color: #99c2f0;">"900900900900"</span>,</p>
+                                <p><span style="color:#dc3545">"ifscCode"</span> : <span style="color: #99c2f0;">"UTIB0002951"</span>,</p>
+                                <p><span style="color:#dc3545">"amount"</span> : <span style="color: #99c2f0;">5000</span>,</p>
+                                <p><span style="color:#dc3545">"mode"</span> : <span style="color: #99c2f0;">"IMPS"</span>,</p>
+                                <p><span style="color:#dc3545">"purpose"</span> : <span style="color: #99c2f0;">"For Invoice 20220200789 "</span>,</p>
+                                <p> }</p>
+                            </div>
+                        </div>
+                        <div class="row text-start pt-4 pb-4">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">STATUS API</h3>
+                                <h6 style="font-weight: 350;">Call the status API with request id to know the fund transfer status.</h6>
+                                <h6 style="font-weight: 350;">Fund Transfer Status API Response</h6>
+                            </div>
+                       </div>
+                        <div class="row bg-code text-start text-light">
+                            <div class="col-md-10 mx-auto">
+                                <p class="pt-2"></p>
+                                <p> {</p>
+                                <p><span style="color:#dc3545">"code"</span> : <span style="color: #28a745;">200</span>,</p>
+                                <p><span style="color:#dc3545">"message"</span> : <span style="color: #99c2f0;">"success"</span>,</p>
+                                <p><span style="color:#dc3545">"data"</span> :{ </p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"requestId"</span> : <span style="color: #99c2f0;">"pout202008260002"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"ReferenceNo"</span> : <span style="color: #99c2f0;">"PTV2d3vBs9O5bA3SefIYehOjcurx7u"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"accountNo"</span> : <span style="color: #99c2f0;">"900900900900"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"ifscCode"</span> : <span style="color: #99c2f0;">"UTIB0002951"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"amount"</span> : <span style="color: #28a745;">5000</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"fee"</span> : <span style="color: #28a745;">5</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"tax"</span> : <span style="color: #28a745;">9.0</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"totalFee"</span> : <span style="color: #28a745;">5.9</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"mode"</span> : <span style="color: #99c2f0;">"IMPS"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"purpose"</span> : <span style="color: #99c2f0;">"For Invoice 20220200789"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"utrNumber"</span> : <span style="color: #99c2f0;">"24110980363"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"statusCode"</span> : <span style="color: #99c2f0;">"SUCCESS"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"status"</span> : <span style="color: #99c2f0;">"Success"</span>,</p>
+                                <p><span style="padding-left:20px ;color:#dc3545">"errorDescription"</span> : <span style="color: #99c2f0;">""</span>,</p>
+                                <p><span style="padding-left:20px ;">}</p>
+                                <p> }</p>
+                            </div>
+                        </div>
+                        <div class=" pt-5 pb-3 row text-start">
+                            <div class="col-md">
+                                <h3 style="font-weight: 350;">GET NOTIFIED</h3>
+                            <h6 style="font-weight: 350;">We also support automatic real time notification about every payment transaction status to your system via webhook.</h6>
+                            <div class="padding-left:35px">
+                                <ul>
+                                    <li>Fully working Sandbox Environment REST API Postman Collection</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bulk">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-10 mx-auto">
+                    <div class="row text-center">
+                        <h3 style="font-weight:350">Bulk File Upload</h3>
+                        <h6 styple="font-weight:400">Upload File and approve</h6>
+                        <hr class="hr-k">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <div class="row pt-4 pb-5">
+                                <div class="col-md-7 float-start">
+                                    <h4 style="font-weight:350">Bulk Upload</h4>
+                                    <ul class="custom-list-1">
+                                        <li class="pt-2 pb-2">Simple Approval or multi user approval workflow</li>
+                                        <li class="pt-2 pb-2">Duplicate File checker mechanism (Industry first)</li>
+                                        <li class="pt-2 pb-2">Multi factor authentication</li>
+                                        <li class="pt-2 pb-2">Maker-checker</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5 float-end ">
+                                    <div class="upload-img text-center">
+                                        <img src="Images/upload.png" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="use cases">
+        <div class="container-fluid bg-col-1">
+            <div class="d-none d-md-block">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <div class="row text-center pt-4 pb-3">
+                            <h2 style="font-weight:400">Use Cases</h2>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <h4 style="font-weight:400">Vendor Payments</h4>
+                                <p>Make vendor payments or supplier payments easily with bulk file upload or API without beneficiary registration requirements.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h4 style="font-weight:400">Online Payment Refunds</h4>
+                                <p>Initiate instant refunds to customer’s UPI handle or bank account number.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h4 style="font-weight:400">Cashback and Rewards</h4>
+                                <p>Issue cashbacks or rewards directly to your customer’s bank account or UPI VPA .</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h4 style="font-weight:400">Split Settlement</h4>
+                                <p>For marketplace or service aggregator split payments scenarios use our payout APIs to automate split payments.</p>
+                            </div>
+                        </div>
+                        <div class="row text-center pt-4 pb-3">
+                            <div class="col-md">
+                                <h4 style="font-weight:400">Salary Disbursement</h4>
+                                <p>Pay salary or wages on time to employees, delivery partners, service partners, business partners, etc…</p>
+                            </div>
+                            <div class="col-md">
+                                <h4 style="font-weight:400">Bank Account Verification</h4>
+                                <p>Verify bank accounts in real-time using API, Get real beneficiary owner name as per bank records.</p>
+                            </div>
+                            <div class="col-md">
+                                <h4 style="font-weight:400">COD Refunds</h4>
+                                <p>Easily manage cash on delivery refunds to customer’s bank account number or UPI handle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-none">
+                <div class="row">
+                    <div class="col-md-10 mx-auto text-center">
+                        <h2 class="pt-5 pb-5" style="font-weight:400">Use Cases</h2>
+                        <hr class="hr-k">
+                        <div class="row text-center">
+                            <div class="col-md-3 pb-3">
+                                <h4 style="font-weight:400">Vendor Payments</h4>
+                                <p>Make vendor payments or supplier payments easily with bulk file upload or API without beneficiary registration requirements.</p>
+                            </div>
+                            <div class="col-md-3 pb-3">
+                                <h4 style="font-weight:400">Online Payment Refunds</h4>
+                                <p>Initiate instant refunds to customer’s UPI handle or bank account number.</p>
+                            </div>
+                            <div class="col-md-3 pb-3">
+                                <h4 style="font-weight:400">Cashback and Rewards</h4>
+                                <p>Issue cashbacks or rewards directly to your customer’s bank account or UPI VPA .</p>
+                            </div>
+                            <div class="col-md-3 pb-3">
+                                <h4 style="font-weight:400">Split Settlement</h4>
+                                <p>For marketplace or service aggregator split payments scenarios use our payout APIs to automate split payments.</p>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-md-3 pb-3">
+                                <h4 style="font-weight:400">Salary Disbursement</h4>
+                                <p>Pay salary or wages on time to employees, delivery partners, service partners, business partners, etc…</p>
+                            </div>
+                            <div class="col-md-3 pb-3">
+                                <h4 style="font-weight:400">Bank Account Verification</h4>
+                                <p>Verify bank accounts in real-time using API, Get real beneficiary owner name as per bank records.</p>
+                            </div>
+                            <div class="col-md-3 pb-3">
+                                <h4 style="font-weight:400">COD Refunds</h4>
+                                <p>Easily manage cash on delivery refunds to customer’s bank account number or UPI handle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industry">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <div class="row text-center pt-5">
+                            <h3 style="font-weight:350">Industry</h3>
+                            <h6 styple="font-weight:400">Payout used in this following industries</h6>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row pt-3 text-center">
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">E-commerce</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Quick commerce</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Marketplace</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Service Aggregator</h5>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Hyper local delivery</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Ride hailing service</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Agritech</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">B2B Business</h5>
+                            </div>
+                        </div>
+                        <div class="row text-center pb-5">
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">NBFC</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Insurance</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Payment gateways</h5>
+                            </div>
+                            <div class="col-md borderr">
+                                <h5 style="font-weight: 300;">Other</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="payment">
+        <div class="container-fluid bg-col-1 pt-5">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="row text-center pb-3">
+                        <h4 style="font-weight: 400;">Payout Payment Methods</h4>
+                        <hr class="hr-k">
+                    </div>
+                    <div class="d-none d-md-block">
+                        <div class="row justify-content-center pb-4">
+                            <img class="bhim-icon mr-2 img-fluid" src="Images/upi.png">
+                            <img class="bhim-icon mr-2 img-fluid" src="Images/imps.png">
+                            <img class="bhim-icon mr-2 img-fluid" src="Images/neft.png">
+                        </div>
+                    </div>
+                    <div class="d-md-none">
+                        <div class="row ">
+                            <div class="col-6 text-end">
+                                <img class="bhim-icon img-fluid" src="Images/upi.png">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="bhim-icon img-fluid" src="Images/imps.png">
+                            </div>
+                        </div>
+                        <div class="row pt-3 pb-3 justify-content-center">
+                            <div class="col-12 text-center">
+                                <img class="bhim-icon img-fluid" src="Images/neft.png">
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="row justify-content-center">
+                        <div class="col-md-9 mx-auto ">
+                            <div class="row">
+                                <div class="col-md-6 text-center pb-5">
+                                    <div class="howit_work">
+                                        <h5>Bank Account Transfer</h5>
+                                        <p class="mb-0 pb-0 ">Fund Transfer APIs support NEFT / RTGS / IMPS modes</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="howit_work ">
+                                        <h5>UPI Payouts / UPI Refunds</h5>
+                                        <p class="mb-0 pb-0 ">UPI Fund transfer APIs support instant refunds modes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container-fluid bg-col-1" style="padding:0px;overflow:hidden;background-image: url('Images/faq-dotted.png'); background-position: fixed; background-attachment: scroll; background-repeat: no-repeat; background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <div class="row pt-5 pb-3 text-center">
+                            <h4 style="font-weight: 350;">Payout FAQ</h4>
+                            <hr class="hr-k">
+                        </div>
+                        <div class="row pb-5">
+                            <div class="accordion" id="faqAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                            What is Payout API?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseOne" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Payout API is a REST API that allows transfer funds to any bank account number (India bank accounts only) or any UPI handle.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            What is Bulk Payout?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseTwo" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Using the Bulk Payout feature, authenticated users can upload all payout details as a single file and upload & approve payment in bulk from the web dashboard.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            What are the different payout methods supported?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseThree" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>IMPS</li>
+                                                <li>UPI</li>
+                                                <li>NEFT</li>
+                                                <li>RTGS</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 4 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                            Can I transfer funds to Any Bank Account?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseFour" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Yes, Using our API or our Dashboard you can send payments to any Bank accounts in India.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 5 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                            Can I transfer funds to Any UPI Handles / VPAs?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseFive" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Yes, Using our API or our Dashboard you can send payments to any UPI handles, the UPI handle may belong to PhonePe, gPay or PayTM, AmazonPay or BHIM.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 6 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                            Can I transfer funds on bank holidays?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseSix" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Yes, IMPS and UPI payment methods work 24x7. In case of NEFT / RTGS payments, they are processed on the next bank working day. For example, if today is Sunday, the payout initiated will be sent on the next working day (Monday morning).
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 7 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                                            Do you provide a Web Application / Dashboard?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseSeven" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Yes, we provide a web-based dashboard to review your payouts, and we also provide statements, search functionalities, daily and monthly reports, and other insightful reports for viewing and downloading.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 8 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+                                            How does integration work?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseEight" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Integration with our Payout API is done via REST API, enabling funds transfer to any bank account number (India bank accounts only) or any UPI handle.
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Accordion Item 9 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+                                            Do you provide a Testing / Sandbox Environment?
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-collapseNine" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Yes, we provide a fully working sandbox environment with API access and a web-based dashboard for development and testing purposes. You can simulate test transactions with success, failure, or other possible statuses. We also provide a Postman collection, 1:1 developer calls, and code samples to help you get started.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer2 pt-4">
+        <div class="container">
+            <div class="d-none d-md-block">
+                <div class="row">
+                    <div class="col-md" style="padding-left: 125px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Company</h5>
+                                <h6 style="font-weight: lighter;">Home</h6>
+                                <h6 style="font-weight: lighter;">About Us</h6>
+                                <h6 style="font-weight: lighter;">Contact Us</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Payout APIs</h5>
+                                <h6 style="font-weight: lighter;">Fund Transfer API</h6>
+                                <h6 style="font-weight: lighter;">UPI Payout API</h6>
+                                <h6 style="font-weight: lighter;">Bank Account Verification API</h6>
+                                <h6 style="font-weight: lighter;">UPI Verification API</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>BBPS Biller APIs</h5>
+                                <h6 style="font-weight: lighter;">BBPS Biller API for B2C</h6>
+                                <h6 style="font-weight: lighter;">BBPS Biller API for B2B</h6>
+                            </div>
+                            <div class="col-md-1">
+                                <h5>Legal</h5>
+                                <h6 style="font-weight: lighter;">Terms</h6>
+                                <h6 style="font-weight: lighter;">Privacy</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-md-none">
+                <div class="row" style="padding:20px">
+                    <div class="col-6">
+                        <h5>Company</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">Home</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">About Us</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Contact Us</h6>
+                    </div>
+                    <div class="col-6">
+                        <h5>Payout APIs</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">Fund Transfer API</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">UPI Payout API</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Bank Account Verification API</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">UPI Verification API</h6>
+                    </div>
+                </div>
+                <div class="row pt-4" style="padding:20px">
+                    <div class="col-6">
+                        <h5>BBPS Biller APIs</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">BBPS Biller API for B2C</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">BBPS Biller API for B2B</h6>
+                    </div>
+                    <div class="col-6">
+                        <h5>Legal</h5>
+                        <h6 style="font-weight: lighter;font-size:12px">Terms</h6>
+                        <h6 style="font-weight: lighter;font-size:12px">Privacy</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center pt-3 pb-0" style="padding:15px">
+                <p style="font-size: small;">Copyright © 2024 <a href="#" class="text-white" style="text-decoration: none;">Payout Fintech Private Limited</a>. All Rights Reserved.</p>            
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
