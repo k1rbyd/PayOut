@@ -1,5 +1,6 @@
 # PayOut Fintech Company - Entrance Page
 
-This repository hosts the codebase for the entrance page of the official website of PayOut (https://www.payoutfintech.in/), a forward-thinking fintech startup. Developed as part of my internship at PayOut.
+This repository contains the code for the entrance page of PayOut Fintech's official website (https://www.payoutfintech.in/). I developed this during my internship at PayOut.
 
-The website I built for them is responsive and is built by using Bootstrap 5.0.
+# About the Project
+The website is designed to look good on computers and phones alike. I used Bootstrap 5.0, a tool that helps make websites work well on different devices.
